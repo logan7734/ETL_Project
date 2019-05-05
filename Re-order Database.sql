@@ -1,0 +1,11 @@
+ALTER TABLE wikidata_2015
+	ORDER BY State ASC;
+ALTER TABLE wikidata_2015
+	ADD state_id INT AUTO_INCREMENT NOT NULL,
+	ADD PRIMARY KEY (state_id);
+
+ALTER TABLE wikidata_2015
+	ORDER BY State ASC;    
+ALTER TABLE wikidata_2018
+	ADD state_id INT AUTO_INCREMENT NOT NULL,
+	ADD PRIMARY KEY (state_id);
