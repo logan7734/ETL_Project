@@ -1,0 +1,41 @@
+body {
+    background-color: teal;
+}
+
+.locating {
+    padding-left:7%;
+    padding-right:7%;
+    padding-top: 9%;
+    padding-bottom: 9%;
+    margin-top: 9%;
+}
+
+.appearance {
+    background-color: teal;
+    overflow: auto;
+}
+
+#disclaimer {
+    padding-top: .5rem;
+    padding-bottom: 1.5rem;
+    color: white;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+    padding-top: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: lightgrey;
+}
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+}

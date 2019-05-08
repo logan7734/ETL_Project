@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'styles/styles.css')}}">
+</head>
+
+<body>
+    <div class="container-fluid rounded">
+        <div class="row appearance">
+            <div class="col-sm-12">
+                <h1>
+                    Data
+                </h1>  
+                <hr>
+                <p id="disclaimer">
+                    The following table contains a sample of the data in this project.
+                </p>
+                <table class="table table-hover table-striped table-light">
+                    <thead>
+                        <tr>
+                            <th title="Field #1">State</th>
+                            <th title="Field #2">Num Restaurants Per 10k People in 2018</th>
+                            <th title="Field #3">Vehicles per 1k People in 2015</th>
+                            <th title="Field #4">Vehicles per 1k People in 2018</th>
+                            <th title="Field #5">Year of Heart Health Measurement</th>
+                            <th title="Field #6">Health Measurement Category</th>
+                            <th title="Field #7">Health Measurement Value Type</th>
+                            <th title="Field #8">Health Measurement Unit</th>
+                            <th title="Field #9">Health Measurement</th>
+                            <th title="Field #10">Alt Health Measurement</th>
+                            <th title="Field #11">Lower Confidence Limit</th>
+                            <th title="Field #12">Upper Confidence Limit</th>
+                            <th title="Field #13">Health Measurement Breakout Category</th>
+                            <th title="Field #14">Health Measurement Breakout Group</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for thing in alldata %}
+                        <tr>
+                            {% for part in thing %}
+                            <td align="right">{{part}}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
