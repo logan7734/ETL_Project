@@ -9,6 +9,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
 
+#You need to pip install mysqlclient so sqlalchemy can work with MySQL databases
 engine = create_engine("mysql://lfmavjnpmit77pyc:piypmhp3rei57h25@zj2x67aktl2o6q2n.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/zfrd6ni2bkg243pf", echo=True)
 
 Base = automap_base()
